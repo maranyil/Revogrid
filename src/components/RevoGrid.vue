@@ -1,72 +1,38 @@
 <template>
-  <div id="app">
-    <v-grid
-      class="tabla"
-      theme="compact"
-      :source="rows"
-      :columns="columns"
-    ></v-grid>
+  <div class="tile">
+    <component v-if="vGrid" :is="vGrid" class="grid-container" :source="source" :columns="columns" :pinnedTopRows="pinnedTopRows" :pinnedBottomRows="pinnedBottomRows" theme="material" resize="true" rowClass="highlighted"/>
   </div>
 </template>
 
 <script>
-import VGrid from "@revolist/vue-datagrid";
-
+import generateFakeDataObject from './dataGenerate';
 export default {
-  name: "RevoGrid",
-  components: {
-    VGrid,
-  },
+  name: 'demo-initial',
   data() {
     return {
+      vGrid: null,
+      source: [],
+      pinnedBottomRows: [],
       columns: [],
-      rows: [
-        {
-          name: "Juan",
-          details: "Item 1",
-        },
-      ],
+      pinnedTopRows: []
     };
   },
-  created() {
-    this.assignCol();
-  },
-  methods: {
-    assignCol() {
-      const heads = [
-        { name: 'Persona', prop: "name" },
-        { name: 'Edad', prop: "age" },
-        { name: 'Bici', prop: "bike" },
-      ]
-      const props = heads.map(el => el.prop)
-      console.log(props)
-      const columns = [
-        {
-          name: heads.map(el => el.name),
-          prop: 'name',
-
-
-          // use this to return custom html per column
-          columnTemplate: (createElement, column) => {
-            return createElement(
-              "span",
-              {
-                style: {
-                  color: "red",
-                },
-              },
-              column.name
-            );
-          },
-        },
-      ];
-      this.columns = columns;
-    },
-  },
-};
+  mounted() {
+    import('./peopleSample.js').then((e) => {
+      const newData = generateFakeDataObject(e.default, 5);
+      for (let key in newData) {
+        this[key] = newData[key];
+      }
+    });
+    import('@revolist/vue-datagrid').then((m) => {
+      this.vGrid = m.VGrid;
+    });
+  }
+}
 </script>
 <style scoped>
-.tabla {
-  height: 900px;
-}
+  .tile {
+    width: 100%;
+    height: 500px
+  }
 </style>
