@@ -943,6 +943,13 @@
     "@babel/helper-validator-identifier" "^7.16.7"
     "to-fast-properties" "^2.0.0"
 
+"@duetds/date-picker@^1.1.0":
+  "integrity" "sha512-jx4oSIrZAVsXYLyQGXbEmuo0gEXAqrNIGp3rG8L03XSxFFFca/bTpCj5v6yd48vVWOtAXD8y04S/+flOimra0A=="
+  "resolved" "https://registry.npmjs.org/@duetds/date-picker/-/date-picker-1.4.0.tgz"
+  "version" "1.4.0"
+  dependencies:
+    "@stencil/core" "^2.3.0"
+
 "@hapi/address@2.x.x":
   "integrity" "sha512-QD1PhQk+s31P1ixsX0H0Suoupp3VMXzIVMSwobR3F3MSUO2YCV0B7xqLcUw/Bh8yuvd3LhpyqLQWTNcRmp6IdQ=="
   "resolved" "https://registry.npmjs.org/@hapi/address/-/address-2.1.4.tgz"
@@ -1044,6 +1051,33 @@
   "resolved" "https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz"
   "version" "1.1.3"
 
+"@revolist/revo-dropdown@^2.0.0":
+  "integrity" "sha512-oemAihg6P0JkSGfcxQ0mqPp5anc1oywn/ELMhVou5zwhRLNkmfhM63WVTuCYlQA3vBFuTJRtybhFkjj0TN5W/w=="
+  "resolved" "https://registry.npmjs.org/@revolist/revo-dropdown/-/revo-dropdown-2.0.1.tgz"
+  "version" "2.0.1"
+
+"@revolist/revogrid-column-date@^1.1.0":
+  "integrity" "sha512-ymxANW+k9TR587CQJPX2caad+oPHfMFPWbW88WhPBgzr1c1tI3nffEpZ2ir7UKnEjoq7WL9IRiaGEZ0u5SpQRA=="
+  "resolved" "https://registry.npmjs.org/@revolist/revogrid-column-date/-/revogrid-column-date-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "@duetds/date-picker" "^1.1.0"
+
+"@revolist/revogrid-column-numeral@^1.0.2":
+  "integrity" "sha512-f5Z1QfxlsdXf6l+Aocd5RewFOpnaPj5Sl+HHJEjeRPjQGZv6Bx/ibAdyA3gtRoiSAaQuTt3BwWyfRTQNJHwWwQ=="
+  "resolved" "https://registry.npmjs.org/@revolist/revogrid-column-numeral/-/revogrid-column-numeral-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "@types/numeral" "0.0.28"
+    "numeral" "^2.0.6"
+
+"@revolist/revogrid-column-select@^2.0.2":
+  "integrity" "sha512-pnGGZ48FAUohC5ix0/rs8e0aCHH5yeJaIZBpLIwDV3/g1yfeN9T+3gJlL4M0aEADub6+qr/RG255ezLTFx2mSA=="
+  "resolved" "https://registry.npmjs.org/@revolist/revogrid-column-select/-/revogrid-column-select-2.0.2.tgz"
+  "version" "2.0.2"
+  dependencies:
+    "@revolist/revo-dropdown" "^2.0.0"
+
 "@revolist/revogrid@^3.1.6":
   "integrity" "sha512-TDOaHnpOGeAU5qv2Dw1QgaIZRKa4MAEpZJyGA10T107vmQS4dbvZUpMJeOOWFr+8wOTV44RtJK474TKW663EbA=="
   "resolved" "https://registry.npmjs.org/@revolist/revogrid/-/revogrid-3.1.6.tgz"
@@ -1069,7 +1103,7 @@
   "resolved" "https://registry.npmjs.org/@soda/get-current-script/-/get-current-script-1.0.2.tgz"
   "version" "1.0.2"
 
-"@stencil/core@^2.6.0":
+"@stencil/core@^2.3.0", "@stencil/core@^2.6.0":
   "integrity" "sha512-s/UJp9qxExL3DyQPT70kiuWeb3AdjbUZM+5lEIXn30I2DLcLYPOPXfsoWJODieQywq+3vPiLZeIdkoqjf6jcSw=="
   "resolved" "https://registry.npmjs.org/@stencil/core/-/core-2.16.1.tgz"
   "version" "2.16.1"
@@ -1160,6 +1194,11 @@
   "integrity" "sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw=="
   "resolved" "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz"
   "version" "2.4.1"
+
+"@types/numeral@0.0.28":
+  "integrity" "sha512-Sjsy10w6XFHDktJJdXzBJmoondAKW+LcGpRFH+9+zXEDj0cOH8BxJuZA9vUDSMAzU1YRJlsPKmZEEiTYDlICLw=="
+  "resolved" "https://registry.npmjs.org/@types/numeral/-/numeral-0.0.28.tgz"
+  "version" "0.0.28"
 
 "@types/q@^1.5.1":
   "integrity" "sha512-L28j2FcJfSZOnL1WBjDYp2vUHCeIFlyYI/53EwD/rKUBQ7MtUUfbQWiyKJGpcnv4/WgrhWsFKrcPstcAt/J0tQ=="
@@ -5940,6 +5979,11 @@
   "integrity" "sha512-Y1wZESM7VUThYY+4W+X4ySH2maqcA+p7UR+w8VWNWVAd6lwuXXWz/w/Cz43J/dI2I+PS6wD5N+bJUF+gjWvIqg=="
   "resolved" "https://registry.npmjs.org/num2fraction/-/num2fraction-1.2.2.tgz"
   "version" "1.2.2"
+
+"numeral@^2.0.6":
+  "integrity" "sha512-qaKRmtYPZ5qdw4jWJD6bxEf1FJEqllJrwxCLIm0sQU/A7v2/czigzOb+C2uSiFsa9lBUzeH7M1oK+Q+OLxL3kA=="
+  "resolved" "https://registry.npmjs.org/numeral/-/numeral-2.0.6.tgz"
+  "version" "2.0.6"
 
 "oauth-sign@~0.9.0":
   "integrity" "sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ=="

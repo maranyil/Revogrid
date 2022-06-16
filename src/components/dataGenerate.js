@@ -74,7 +74,7 @@ export default function generateFakeDataObject(rows, colsNumber) {
             result[i][j] = `${i}:${j}`;
         }
     }
-    const pinnedTopRows = result[10] && [result[10]] || [];
+    const pinnedTopRows = result[3] && [result[3]] || [];
     const pinnedBottomRows = result[1] && [result[1]] || [];
 
     return {
@@ -99,7 +99,7 @@ export function generateFakeDataDemo(rows, colsNumber) {
     const companyColumn = columns[1].children[1];
     columns[1].children[1] = {
         ...companyColumn,
-        columnType: 'select',
+        editor: 'select',
         source: companies,
     };
 
